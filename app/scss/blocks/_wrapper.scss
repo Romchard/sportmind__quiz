@@ -1,0 +1,36 @@
+.wrapper {
+
+  @include flex-center(false);
+  flex-direction: column;
+  gap: 30px;
+
+  padding-block: 40px;
+
+  & div {
+
+    height: 350px;
+
+    @include flex-center(false);
+    gap: 100px;
+
+    & img:nth-child(1) {
+      align-self: flex-end;
+    }
+
+    & img:nth-child(2) {
+      align-self: flex-start;
+    }
+
+    & img:nth-child(3) {
+      align-self: center;
+
+    }
+
+    @include mobile {
+      flex-direction: column;
+      height: auto;
+    }
+
+  }
+
+}

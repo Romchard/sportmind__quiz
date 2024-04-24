@@ -1,0 +1,25 @@
+.footer {
+  padding-block: 30px;
+  border-top: 2px solid $color-blue;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+  }
+
+  &__inner {
+
+    &-list {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 10px;
+    }
+  }
+}

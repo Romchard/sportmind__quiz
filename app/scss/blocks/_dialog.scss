@@ -1,0 +1,36 @@
+.dialog {
+  max-width: 350px;
+  width: 100%;
+  padding: 30px;
+  border-radius: $border-radius-small;
+
+  &::backdrop {
+    background-color: $color-opacity-light-black;
+  }
+
+  & form button {
+    display: inherit;
+    margin-left: auto;
+    color: $color-light;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-blue;
+  }
+
+  &__list {
+
+    @include flex-center(false);
+
+    flex-direction: column;
+    gap: 10px;
+    color: $color-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &-item:last-child {
+      color: $color-gray;
+      pointer-events: none;
+    }
+  }
+}

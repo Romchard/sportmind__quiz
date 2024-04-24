@@ -1,0 +1,56 @@
+.link {
+  padding-inline: 110px;
+
+  @include tablet{
+    padding-inline: 80px;
+    text-align: center;
+  }
+
+  @include reset-link;
+
+  @include flex-center(true);
+
+  height: $button-height;
+  background-color: $color-black;
+  border-radius: $border-radius-medium;
+  color: $color-light;
+
+  &__start {
+    @include hover {
+      background-color: $color-blue;
+    }
+
+  }
+
+  &__cover {
+    padding: 5px;
+    color: $color-blue;
+    background-color: $color-gray-alt;
+  }
+
+  &__test {
+    background-color: $color-blue;
+  }
+
+  &__retest {
+    background-color: $color-yellow;
+  }
+
+  &__disabled {
+    width: 100%;
+    color: $color-gray;
+    background-color: $color-light;
+    pointer-events: none;
+  }
+
+  &__payment {
+    padding-inline: 80px;
+    background-color: $color-blue;
+  }
+}
+
+span.link__cover {
+  font-size: 12px;
+  align-self: flex-start;
+  height: auto;
+}

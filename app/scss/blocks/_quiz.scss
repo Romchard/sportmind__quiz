@@ -1,0 +1,93 @@
+.quiz {
+  &__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 30px 10px;
+    margin-bottom: 40px;
+    background-color: $color-gray-alt;
+    border-radius: $border-radius-medium;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 34px;
+
+    & div:last-child {
+      display: flex;
+      flex-flow: row wrap;
+      flex-grow: 1;
+
+      & input {
+        flex-grow: 1;
+      }
+    }
+
+    &-box {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 14px;
+
+      & div {
+        display: flex;
+        align-items: baseline;
+        padding-inline: 20px;
+        border-radius: $border-radius-small;
+        border: 1px solid $color-black;
+        transition: all .3s linear;
+
+        @include hover {
+          background-color: $color-blue-alt;
+        }
+
+        & label {
+          flex-grow: 1;
+          padding-block: 15px;
+          cursor: pointer;
+        }
+      }
+
+      & button {
+        align-self: center;
+      }
+    }
+
+    &-question {
+      font-weight: 600;
+
+      &__start {
+        color: $color-blue;
+      }
+
+      &__end {
+        color: $color-gray;
+      }
+    }
+  }
+
+  &__question {
+
+    @include fluid-text(18, 16);
+
+    font-weight: 600;
+
+  }
+}
+
+#question__length {
+  pointer-events: none;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+
+
+  &::-webkit-slider-thumb {
+    border-radius: 50%;
+    background-color: $color-blue;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 7px;
+    height: 7px;
+  }
+}

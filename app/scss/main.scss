@@ -1,2 +1,18 @@
-@import 'fonts';
-@import 'variable';
+@import 'normalize', 'fonts', 'mixins', 'media', 'variable', 'utils', 'globals';
+
+@import "blocks/buttons";
+@import "blocks/burger";
+@import "blocks/dialog";
+@import "blocks/footer";
+@import "blocks/form";
+@import "blocks/heading";
+@import "blocks/header";
+@import "blocks/links";
+@import "blocks/preload";
+@import "blocks/payment-stages";
+@import "blocks/psychologist-info";
+@import "blocks/quiz__info";
+@import "blocks/quiz";
+@import "blocks/section";
+@import "blocks/tests";
+@import "blocks/wrapper";

@@ -1,0 +1,29 @@
+.burger {
+  position: relative;
+
+  @include reset-button;
+
+  @include square(60px);
+
+  height: 68px;
+
+  background-color: $color-black;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-blue;
+  }
+
+  &::after {
+
+    @include abs-center;
+
+    content: "";
+    width: 50%;
+    height: 2px;
+    color: $color-light;
+    box-shadow: 0 8px, 0 -8px $color-light;
+  }
+}
+

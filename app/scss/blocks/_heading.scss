@@ -1,0 +1,19 @@
+.heading {
+  margin-bottom: 40px;
+
+  &__payment {
+    margin-bottom: 10px;
+    text-align: center;
+
+    & + p {
+      text-align: center;
+      color: $color-blue;
+    }
+  }
+
+
+  &__main {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

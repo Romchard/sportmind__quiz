@@ -1,0 +1,27 @@
+.button {
+
+  @include reset-button;
+
+  height: $button-height;
+  color: $color-light;
+  font-weight: 500;
+  text-align: center;
+  background-color: $color-blue;
+  border-radius: $border-radius-medium;
+
+  &__payment {
+
+    @include hover {
+      transform: translateY(1px);
+    }
+  }
+
+  &__submit {
+    padding-inline: 80px;
+    cursor: pointer;
+
+    @include hover {
+      background-color: $color-yellow;
+    }
+  }
+}

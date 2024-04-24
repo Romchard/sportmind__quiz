@@ -1,0 +1,11 @@
+#preload {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: $color-blue;
+
+  @include flex-center(false);
+  color: $color-light;
+  opacity: 1;
+  transition: all .3s linear;
+  pointer-events: none;
+}

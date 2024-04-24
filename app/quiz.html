@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/main.min.css" />
+	<title>Sportmind</title>
+</head>
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <img class="logo__img" src="assets/img/small-logo.png" alt="Логотип Sportmind">
+            </a>
+            <button class="button burger"></button>
+            <dialog class="dialog">
+                <form method="dialog">
+                    <button>x</button>
+                    <ul class="dialog__list">
+                        <li class="dialog__list-item"><a class="dialog__list-link" href="./services.html">Услуги</a>
+                        </li>
+                        <li class="dialog__list-item"><a class="dialog__list-link" href="#">Курсы</a></li>
+                    </ul>
+                </form>
+            </dialog>
+        </div>
+    </div>
+</header>
+<main>
+
+    <section class="section quiz">
+        <div class="container">
+            <div class="quiz__wrapper">
+                <div class="quiz__inner">
+                    <div>
+                        Вопрос <span class="quiz__inner-question quiz__inner-question__start">1</span> из <span
+                            class="quiz__inner-question quiz__inner-question__end"></span>
+                    </div>
+                    <div>
+                        <label for="question__length"></label>
+                        <input id="question__length" type="range" min="1" step="1" value="1" max="" tabindex="-1">
+                    </div>
+                </div>
+                <div class="quiz__inner-box">
+                    <span class="quiz__question"></span>
+                    <div>
+                        <input class="quiz__input" type="radio" name="quiz__question" id="question-one" tabindex="1">
+                        <label for="question-one">Подходит</label>
+                    </div>
+                    <div>
+                        <input class="quiz__input" type="radio" name="quiz__question" id="question-two" tabindex="2">
+                        <label for="question-two">Не совсем</label>
+                    </div>
+                    <div>
+                        <input class="quiz__input" type="radio" name="quiz__question" id="question-three" tabindex="3">
+                        <label for="question-three">Не подходит</label>
+                    </div>
+                    <button type="button" class="button button__submit">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <h4>Контакты</h4>
+        <div class="footer__wrapper">
+            <div class="footer__inner">
+                <ul class="footer__inner-list">
+                    <li class="footer__inner-item"><a class="link link__cover" href="tel:+79035212006">+7 903
+                        521-20-06</a> Алексей Попов
+                    </li>
+                    <li class="footer__inner-item"><a class="link link__cover" href="mailto:sportmind@yandex.ru">sportmind@yandex.ru</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    ИНН: <br>
+                    772972522366
+                </li>
+                <li class="footer__list-item">
+                    Получать: <br>
+                    Индивидуальный предприниматель Попов Алексей Николаевич
+                </li>
+                <li class="footer__list-item">
+                    Расчётный счёт: <br>
+                    40802810620000287131
+                </li>
+                <li class="footer__list-item">
+                    Название банка: <br>
+                    ООО "Банк Точка"
+                </li>
+                <li class="footer__list-item">
+                    БИК: <br>
+                    044525104
+                </li>
+                <li class="footer__list-item">
+                    Корр. счёт: <br>
+                    30101810745374525104
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.min.js"></script>
+
+</body>
+</html>

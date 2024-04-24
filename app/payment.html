@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/main.min.css" />
+	<title>Sportmind</title>
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <img class="logo__img" src="assets/img/small-logo.png" alt="Логотип Sportmind">
+            </a>
+            <button class="button burger"></button>
+            <dialog class="dialog">
+                <form method="dialog">
+                    <button>x</button>
+                    <ul class="dialog__list">
+                        <li class="dialog__list-item"><a class="dialog__list-link" href="./services.html">Услуги</a>
+                        </li>
+                        <li class="dialog__list-item"><a class="dialog__list-link" href="#">Курсы</a></li>
+                    </ul>
+                </form>
+            </dialog>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h2 class="heading heading__payment">Оплатите тестирование</h2>
+        <p>
+            Чтобы пройти тест, заполните форму оплаты
+        </p>
+    
+        <form class="payment-form" action="">
+            <label class="payment-form__label" for="sportmind-payer-full-name">
+            </label>
+            <input class="payment-form__input" id="sportmind-payer-full-name" type="text" placeholder="ФИО" required>
+            <label class="payment-form__label" for="sportmind-payer-phone"></label>
+            <input class="payment-form__input" id="sportmind-payer-phone" type="tel" placeholder="+7" required>
+            <label class="payment-form__label" for="sportmind-payer-email"></label>
+            <input class="payment-form__input" id="sportmind-payer-email" type="email" placeholder="Эл. почта">
+            <span class="payment-form__price">1500 рублей</span>
+            <button class="button button__payment" type="submit">Оплатить</button>
+        </form>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <h4>Контакты</h4>
+        <div class="footer__wrapper">
+            <div class="footer__inner">
+                <ul class="footer__inner-list">
+                    <li class="footer__inner-item"><a class="link link__cover" href="tel:+79035212006">+7 903
+                        521-20-06</a> Алексей Попов
+                    </li>
+                    <li class="footer__inner-item"><a class="link link__cover" href="mailto:sportmind@yandex.ru">sportmind@yandex.ru</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    ИНН: <br>
+                    772972522366
+                </li>
+                <li class="footer__list-item">
+                    Получать: <br>
+                    Индивидуальный предприниматель Попов Алексей Николаевич
+                </li>
+                <li class="footer__list-item">
+                    Расчётный счёт: <br>
+                    40802810620000287131
+                </li>
+                <li class="footer__list-item">
+                    Название банка: <br>
+                    ООО "Банк Точка"
+                </li>
+                <li class="footer__list-item">
+                    БИК: <br>
+                    044525104
+                </li>
+                <li class="footer__list-item">
+                    Корр. счёт: <br>
+                    30101810745374525104
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.min.js"></script>
+</body>
+</html>

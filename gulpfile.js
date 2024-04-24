@@ -1,6 +1,6 @@
 const {src, dest, watch, parallel, series} = require('gulp')
 
-const scss = require('gulp-sass')(require('sass'))
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify-es').default
 const browserSync = require('browser-sync').create()
@@ -72,7 +72,7 @@ function pages() {
 }
 
 function scripts() {
-    return src(['app/js/main.js'])
+    return src(['app/js/project-files/*.js'])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
@@ -81,9 +81,9 @@ function scripts() {
 
 function styles() {
     return src('app/scss/main.scss')
-        .pipe(autoprefixer({overrideBrowserslist: ["> 1%", "last 2 versions"]}))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({overrideBrowserslist: ['> 1%', 'last 2 versions']}))
         .pipe(concat('main.min.css'))
-        .pipe(scss[({outputStyle: 'compressed'}).on('error', scss.logError)])
         .pipe(dest('app/css'))
         .pipe(browserSync.stream());
 }
@@ -97,7 +97,7 @@ function watching() {
 
     watch(['app/scss/**/*.scss'], styles)
     // watch(['app/assets/img/src'], images)
-    watch(['app/js/main.js'], scripts)
+    watch(['app/js/project-files/main.js'], scripts)
     watch(['app/assets/components/*', 'app/assets/pages/*'], pages).on('change', browserSync.reload);
     watch(['app/*.html']).on('change', browserSync.reload);
 }
@@ -116,7 +116,7 @@ function dev() {
             'app/assets/img/icons/*.*',
             'app/assets/fonts/*.*',
             'app/js/main.min.js',
-            'app/js/main.js',
+            'app/js/project-files/*.js',
             'app/**/*.html',
             '!app/img/*.svg',
             '!app/img/sprite.svg',

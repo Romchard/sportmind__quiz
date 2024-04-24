@@ -1,0 +1,38 @@
+.payment-stages {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 30px;
+  height: 50%;
+  padding: 65px;
+  border: 1px solid $color-blue;
+  border-radius: $border-radius-small;
+
+  &__heading {
+    align-self: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 30px;
+    list-style-type: disc;
+  }
+
+  &__item {
+    font-weight: 500;
+
+    &::marker {
+      color: $color-blue;
+      font-size: 15px;
+    }
+  }
+
+  &__price {
+    color: $color-blue;
+
+    @include fluid-text(18, 16);
+
+    font-weight: 600;
+
+  }
+}
