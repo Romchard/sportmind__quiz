@@ -1,36 +1,54 @@
 .wrapper {
 
   @include flex-center(false);
+
   flex-direction: column;
   gap: 30px;
 
   padding-block: 40px;
 
-  & div {
-
-    height: 350px;
-
-    @include flex-center(false);
+  &__images {
+    display: flex;
+    justify-content: center;
     gap: 100px;
 
-    & img:nth-child(1) {
+    & img {
       align-self: flex-end;
-    }
 
-    & img:nth-child(2) {
-      align-self: flex-start;
-    }
-
-    & img:nth-child(3) {
-      align-self: center;
-
+      @include tablet {
+        align-self: center;
+        height: 170px;
+      }
     }
 
     @include mobile {
-      flex-direction: column;
+      flex-direction: row;
       height: auto;
+      gap: 50px;
     }
 
+  }
+
+  & div:last-child {
+    display: flex;
+    gap: 100px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 50px;
+      & img {
+        max-height: 159px;
+      }
+    }
+
+
+    & img:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    & img:nth-child(2) {
+      align-self: flex-end;
+    }
   }
 
 }
