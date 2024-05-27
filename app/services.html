@@ -12,7 +12,7 @@
 <header class="header">
     <div class="container">
         <div class="header__inner">
-            <a class="logo" href="#">
+            <a class="logo" href="./services.html">
                 <img class="logo__img" src="assets/img/small-logo.png" alt="Логотип Sportmind">
             </a>
             <button class="button burger"></button>
@@ -49,11 +49,11 @@
                         <div class="tests">
                             <article class="tests__card">
                                 <h3 class="tests__heading">Консультация спортивного психолога</h3>
-                                <a class="link link__retest" href="./quiz-info.html">Перейти</a>
+                                <a id="consultation" class="link link__retest" href="./payment.html">Перейти</a>
                             </article>
                             <article class="tests__card">
                                 <h3 class="tests__heading">Спортивное тестирование на тренажерах</h3>
-                                <a class="link link__cover link__disabled" href="#">Скоро</a>
+                                <a class="link link__test" href="./sports-testing.html">Перейти</a>
                             </article>
                         </div>
                     </div>
@@ -91,34 +91,57 @@
                     </li>
                     <li class="footer__inner-item"><a class="link link__cover" href="mailto:sportmind@yandex.ru">sportmind@yandex.ru</a>
                     </li>
+                    <li id="req" class="footer__inner-item"><a class="link link__cover" href="#">реквизиты</a>
+                    </li>
                 </ul>
             </div>
-            <ul class="footer__list">
-                <li class="footer__list-item">
-                    ИНН: <br>
-                    772972522366
-                </li>
-                <li class="footer__list-item">
-                    Получать: <br>
-                    Индивидуальный предприниматель Попов Алексей Николаевич
-                </li>
-                <li class="footer__list-item">
-                    Расчётный счёт: <br>
-                    40802810620000287131
-                </li>
-                <li class="footer__list-item">
-                    Название банка: <br>
-                    ООО "Банк Точка"
-                </li>
-                <li class="footer__list-item">
-                    БИК: <br>
-                    044525104
-                </li>
-                <li class="footer__list-item">
-                    Корр. счёт: <br>
-                    30101810745374525104
-                </li>
-            </ul>
+            <div class="promo">
+                <span>Made by</span>
+                <div>
+                    <a href="https://cowasport.com" target="_blank">
+                        co<span class="icon">
+            <svg class="icon__footer" width="14"
+                 height="12"
+                 viewBox="0 0 14 12"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.266506 2.09881C0.115224 1.78556 0.249429 1.4091 0.56475 1.2622C0.876094 1.11715 1.24611 1.25112 1.39243 1.56188L4.80368 8.80695C4.91482 9.04299 4.85596 9.32412 4.65947 9.49576C4.36904 9.74946 3.91682 9.65711 3.74911 9.30985L0.266506 2.09881Z"
+                      fill="#EB0032"/>
+                <path d="M6.22567 4.40254C6.09413 4.13715 6.16636 3.81591 6.39884 3.63237C6.70962 3.38702 7.16721 3.4878 7.34617 3.841L8.79041 6.69148C8.87994 6.86818 9.13032 6.87366 9.22749 6.70105L12.6367 0.645216C12.8275 0.306241 13.2759 0.217729 13.5813 0.458771C13.8232 0.649799 13.8926 0.987282 13.7455 1.25822L9.68349 8.74082C9.39608 9.27027 8.63132 9.25605 8.36378 8.71628L6.22567 4.40254Z"
+                      fill="#EB0032"/>
+                <rect x="4" y="10.9999" width="5" height="1" rx="0.5" fill="#EB0032"/>
+            </svg>
+        </span>asport</a> © 2024
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal__inner">
+            <span class="modal__close"></span>
+            <div class="modal__content">
+                <a class="link__cover" href="#">реквизиты</a>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        ИНН: 772972522366
+                    </li>
+                    <li class="footer__list-item">
+                        Получать: Индивидуальный предприниматель Попов Алексей Николаевич
+                    </li>
+                    <li class="footer__list-item">
+                        Расчётный счёт: 40802810620000287131
+                    </li>
+                    <li class="footer__list-item">
+                        Название банка: ООО "Банк Точка"
+                    </li>
+                    <li class="footer__list-item">
+                        БИК: 044525104
+                    </li>
+                    <li class="footer__list-item">
+                        Корр. счёт: 30101810745374525104
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

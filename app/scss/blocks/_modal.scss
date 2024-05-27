@@ -1,0 +1,58 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-inline: 10px;
+  display: none;
+  background-color: $color-opacity-light-black;
+  z-index: 1000;
+
+  &.open {
+    @include flex-center(false);
+  }
+
+  &__inner {
+    position: relative;
+    background-color: $color-light;
+    padding: 30px;
+    border-radius: $border-radius-medium;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: $color-blue-alt;
+
+    @include square(40px);
+
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: "";
+      @include abs-center;
+
+
+      width: 14px;
+      height: 1px;
+      background-color: $color-blue;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content > a {
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: $border-radius-medium;
+  }
+}

@@ -7,7 +7,7 @@
       display: flex;
       flex-direction: column;
 
-      @include tablet{
+      @include tablet {
         flex-flow: row nowrap;
       }
 
@@ -119,5 +119,216 @@
       }
     }
 
+  }
+
+  &-laboratory {
+    &__wrapper {
+      display: flex;
+      gap: 36px;
+      margin-bottom: 60px;
+
+      &-box {
+        max-width: 315px;
+
+        @include mobile {
+          max-width: unset;
+        }
+
+        & .primary-color {
+          color: $color-blue;
+        }
+      }
+
+      &-heading {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      &-list {
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      &-item:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &-item:last-child {
+        margin-bottom: 30px;
+      }
+
+      &-item {
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &__flex {
+          display: flex;
+          flex-flow: column wrap;
+          gap: 10px;
+
+          & span:first-letter {
+            text-transform: capitalize;
+          }
+
+          & span {
+            text-transform: lowercase;
+            font-weight: 400;
+          }
+        }
+      }
+
+      & .tests {
+        flex-flow: row wrap;
+
+        @include tablet-above {
+          justify-content: center;
+        }
+
+
+        &__card {
+          gap: 10px;
+        }
+
+        & .payment-stages {
+          max-width: 280px;
+          padding: 20px 20px 20px 40px;
+          height: auto;
+
+          @include tablet {
+            max-width: unset;
+            width: 100%;
+          }
+
+          & .payment-stages__heading {
+            align-self: flex-start;
+          }
+        }
+      }
+
+      &-cover {
+        justify-content: center;
+        align-items: center;
+        padding: 36px;
+        background-color: $color-gray-alt;
+        border-radius: $border-radius-small;
+
+
+        & .heading {
+          margin-bottom: 0;
+        }
+      }
+
+      @include mobile {
+        flex-flow: column wrap;
+      }
+
+      &-inner {
+        display: flex;
+        flex-flow: column wrap;
+        max-width: 308px;
+        width: 100%;
+        gap: 30px;
+
+        & .heading__main {
+          @include tablet {
+            margin-bottom: 20px;
+          }
+        }
+
+        @include tablet {
+          flex-flow: row wrap;
+          justify-content: center;
+        }
+
+        @include mobile {
+          justify-content: flex-start;
+        }
+
+
+        & .time-box {
+          display: flex;
+          max-width: 260px;
+          gap: 10px;
+          padding: 10px;
+
+          @include fluid-text(24, 18);
+
+          color: $color-blue;
+          border-radius: $border-radius-small;
+          background-color: $color-light;
+        }
+
+        & .time-info {
+          background-color: $color-light;
+          font-weight: 600;
+        }
+
+        &.cover {
+          max-width: unset;
+        }
+
+        &__box {
+          display: flex;
+          flex-flow: column wrap;
+          gap: 10px;
+          color: #292B2D;
+        }
+
+        @include tablet {
+          max-width: unset;
+        }
+
+        & .heading {
+          max-width: unset;
+
+          @include tablet {
+            text-align: center;
+          }
+
+          @include fluid-text(30, 24)
+        }
+
+        & .primary-color {
+          color: $color-blue;
+        }
+      }
+
+      &-content {
+        @include mobile {
+          text-align: center;
+        }
+      }
+
+      &-video {
+        padding: 20px;
+        border-radius: $border-radius-medium;
+        background-color: $color-blue;
+
+        & > .video {
+          aspect-ratio: 16/9;
+          border-radius: $border-radius-medium;
+        }
+      }
+
+      &-carousel {
+        padding: 20px;
+        flex-grow: 1;
+        border-radius: $border-radius-medium;
+        background-color: $color-blue;
+        max-width: 636px;
+        display: flex;
+        overflow-x: auto;
+        gap: 30px;
+
+        @include mobile {
+          max-width: unset;
+        }
+
+        &__img {
+          border-radius: $border-radius-medium;
+          object-fit: contain;
+        }
+      }
+    }
   }
 }

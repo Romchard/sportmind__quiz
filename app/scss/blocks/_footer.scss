@@ -1,13 +1,14 @@
 .footer {
   padding-block: 30px;
-  border-top: 2px solid $color-blue;
+  border-top: 4px solid $color-blue;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 
     @include tablet {
+      align-items: flex-start;
       flex-direction: column;
       gap: 30px;
     }
@@ -22,4 +23,25 @@
       gap: 10px;
     }
   }
+}
+
+.icon {
+
+  @include flex-center(true);
+
+  &__footer {
+    color: $color-red;
+  }
+}
+
+.promo {
+
+  @include fluid-text(14, 12);
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  gap: 5px;
+  max-width: 135px;
+  margin-left: auto;
 }

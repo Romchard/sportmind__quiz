@@ -97,7 +97,7 @@ function watching() {
 
     watch(['app/scss/**/*.scss'], styles)
     // watch(['app/assets/img/src'], images)
-    watch(['app/js/project-files/main.js'], scripts)
+    watch(['app/js/project-files/*.js'], scripts)
     watch(['app/assets/components/*', 'app/assets/pages/*'], pages).on('change', browserSync.reload);
     watch(['app/*.html']).on('change', browserSync.reload);
 }

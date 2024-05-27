@@ -1,5 +1,11 @@
 .wrapper {
 
+
+  @include desktop-above {
+    height: 100vh;
+    justify-content: space-evenly;
+  }
+
   @include flex-center(false);
 
   flex-direction: column;

@@ -16,7 +16,13 @@
     text-transform: uppercase;
     margin-bottom: 48px;
   }
-  &__courses{
+
+  &__courses {
     margin-bottom: 19px;
+  }
+
+  &__laboratory {
+    max-width: unset;
+    margin-bottom: 30px;
   }
 }
